@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{%block mycontent%}
+
+    <h1>employeedata</h1>
+    {%for employee in emplo %}
+        <ul>
+            <li class="list-group-item">
+                {{employee.id}}<br>
+                {{employee.name}}<br>
+                {{employee.place}}<br>
+                {{employee.mobile}}<br>
+                {{employee.email}}<br>
+                {{employee.salary}}<br>
+          
+
+            </li>
+            # GIVE TD AND TR TO CREATE TABLE
+        </ul>
+    {%endfor%}
+
+{%endblock%}
