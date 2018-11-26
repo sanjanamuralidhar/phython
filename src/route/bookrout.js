@@ -1,20 +1,21 @@
 const express=require("express");
 const booksRouter=express.Router();
+const Bookdata=require("../model/Bookdata.js")
 function router(nav){
-    var books=[
-        {name:"bookapp",author:"books1",genre:"genre1"},
-        {name:"happy",author:"books2",genre:"genre2"},
-        {name:"journey",author:"books3",genre:"genre3"},
-        {name:"faraway",author:"books4",genre:"genre4"},
-        {name:"story",author:"books5",genre:"genre5"} ];
+    
     booksRouter.route("/").get(function(req,res){
+        Bookdata.find().then(function(books){
         res.render("books",{title:"books",books,nav})
     });
+});
     booksRouter.route("/:id").get((req,res)=>{
-        const id=req.params.id;    
-        res.render("book",{title:"books",books,nav,book:books[id]});
+        const id=req.params.id; 
+        Bookdata.findOne({_id:id}).then(function(book)
+           
+        {res.render("book",{title:"books",nav,book});
         
         });
+    });
         return booksRouter;
 }
 

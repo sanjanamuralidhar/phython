@@ -94,20 +94,22 @@
             <div class="row">    
               <br>
               <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="http://api.randomuser.me/portraits/thumb/men/58.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                <a class="story-title" href="#"><img alt="" src="http://api.randomuser.me/portraits/thumb/women/58.jpg" style="width:100px;height:100px" class="img-circle"></a>
               </div>
-              <div class="row">
+              <form class="form" method="get" action="/admin/add">
+                    <div class="row">
                   
-                     <form>
-                      <input type="text" class="form controll" placeholder="Book name"><br>
+                        <div class="col-xs-6">
+                            <input type="text" name="bookname" class="form controll" placeholder="Book name"><br><br>
+            
+                            <input type="text" name="author" class="form controll" placeholder="Author name"><br><br>
                      
-                      <input type="text" class="form controll" placeholder="Author name"><br>
-                     
-                      <input type="text" class="form controll" placeholder="language"><br>
+                            <input type="text" name="language" class="form controll" placeholder="language"><br><br>
                       
-                      <input type="text" class="form controll" placeholder="publishers"><br>
+                            <input type="text" name="publishers" class="form controll" placeholder="publishers"><br><br>
                     
-                      <button class="btn btn-danger">add book</button><br>
+                            <button class="btn btn-danger">admin</button>
+                      </div>
                   </div><br>
                 </form>
                         
